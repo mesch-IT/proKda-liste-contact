@@ -1,12 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+
+    <header class="header">
+        <h1>Répertoire de contact</h1>
+    </header>
+    <div class="main">
+        <div class="grid">
+            <div class="titleForm">
+                <h1>Formulaire de contact</h1>
+            </div>
+            <form action="">
+                <p>Pénom</p>
+                <input type="text" id="prenom" class="input">
+                <p>Nom</p>
+                <input type="text" id="nom" class="input">
+                <p>Groupe</p>
+                <select name="groupe" id="groupe" class="input">
+                    <option value=""></option>
+                    <option value="amis">Amis</option>
+                    <option value="Famille">Famille</option>
+                    <option value="Connaissance">Connaissance</option>
+                </select>
+                <p>Bio</p>
+                <textarea name="bio" id="bio" cols="30" rows="10" class="input"></textarea> <br>
+                <input type="file" id="image" accept="image/png, image/jpeg" title="Choisir un fichier">
+                <div class="button">
+                    <button type="submit" id="buttonCreer">Créer</button>
+                    <button type="reset" id="buttonReini">Réini.</button>
+                </div>
+            </form>
+        </div>
+        <div class="grid" id="grid2">
+            <div class="titleForm">
+                <h1>Liste de contact</h1>
+            </div>
+            <div id="contacts"></div>
+        </div>
+    </div>
+    </div>
+
+
+
+    <script src="script.js"></script>
 </body>
+
 </html>
