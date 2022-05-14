@@ -80,16 +80,16 @@ const listContact = document.getElementById("contacts")
 let i = 0
 buttonCreer.addEventListener("click", function (event) {
   event.preventDefault()
- 
+
   source = image_input.value
   let divDisplay = document.createElement("div")
   divDisplay.classList.add("contacts")
 
   let grid2 = document.getElementById("grid2")
   grid2.appendChild(divDisplay)
-  let textId = document.createElement("h6")
-  textId.textContent = ++i
-  console.log(i);
+  // let textId = document.createElement("h6")
+  // textId.textContent = ++i
+  // console.log(i);
 
 
   let prenom = document.getElementById("prenom").value
@@ -131,37 +131,38 @@ buttonCreer.addEventListener("click", function (event) {
   listBio.textContent = bio
   divDisplay.appendChild(listBio)
 
-    divDisplay.appendChild(textId)
+  // divDisplay.appendChild(textId)
 
-  
+
 
   // document.getElementById("hr").style.visibility = "visible"
 
   deleteItem.addEventListener("click", function () {
-    // listPrenom.remove()
-    // listNom.remove()
-    // listBio.remove()
-    // listText.remove()
-    // createImage.remove()
+    listPrenom.remove()
+    listNom.remove()
+    listBio.remove()
+    listText.remove()
+    createImage.remove()
 
-    divDisplay.remove()
+    // divDisplay.remove()
 
     deleteItem.style.display = "none"
 
 
   })
-   let id = ""
+ // let id = ""
   divDisplay.addEventListener("click", function () {
+    // event.preventDefault()
 
-          let id = textId.textContent
-         console.log(id);
-
-          console.log("textid " +textId.textContent);
-
-          
+    // let id = textId.textContent
+    // console.log(id);
  
+    // console.log("textid " + textId.textContent);
+
+
+
     prenom = divDisplay.childNodes[2]
-    document.getElementById("prenom").value =  textId.textContent
+    document.getElementById("prenom").value = prenom.textContent
 
     nom = divDisplay.childNodes[3]
     document.getElementById("nom").value = nom.textContent
@@ -174,68 +175,93 @@ buttonCreer.addEventListener("click", function (event) {
     document.getElementById("selectText").textContent = selectText.textContent
 
 
-     
+
     //  image_input.textContent = source
     // console.log(divDisplay.childNodes[0]);
-     
+
     //  document.getElementById("displayImage").src =  divDisplay.childNodes[0]
 
-         
-       image.src =   divDisplay.childNodes[0].src
 
-            console.log(image.src);
-    
-        //  image.src = lien
+    image.src = divDisplay.childNodes[0].src
+
+
+    //  image.src = lien
     //  image.style.display = "block"
-      // image.style.visibility = "visible"
-     
-
-
-
-
-
-    document.getElementById("prenom").addEventListener("change",function(){
-
-
-      divDisplay.childNodes[2].textContent = document.getElementById("prenom").value
-
-              
-      console.log(textId.textContent+ " etb "+ id);
-
-     
-    })
-    document.getElementById("nom").addEventListener("change",function(){
-      console.log(textId);
-      divDisplay.childNodes[3].textContent = document.getElementById("nom").value
-     
-    })
-    document.getElementById("bio").addEventListener("change",function(){
-      divDisplay.childNodes[5].textContent = document.getElementById("bio").value
-     
-    })
-    for (option of options) {
-      option.onclick = function () {
-        document.getElementById("selectText").textContent = this.textContent
-        divDisplay.childNodes[4].textContent = document.getElementById("selectText").textContent
-        list.classList.toggle("hide")
-    iconArrow.classList.toggle("rotate")
-       
+    // image.style.visibility = "visible"
     
-      }
-    }
+    // let modif = document.getElementById("modif")
 
-        // buttonCreer.addEventListener("click",function(){
+    // modif.addEventListener("click",function(event){
+    //   event.preventDefault()
 
-   
-        // })
+    //   if (prenom.value != document.getElementById("prenom").value) {
+    //     console.log("modifier");
+    //   }
+      
+    // })
+
+
+           
+
+
+    //  document.getElementById("prenom").addEventListener("change", function () {
+
+
+    //   divDisplay.childNodes[2].textContent = document.getElementById("prenom").value
+
+
+    // //   console.log(textId.textContent + " etb " + id);
+
+
+    // })
+    // // let a = document.getElementById("nom").value
+    // // console.log(a);
+    // // console.log(divDisplay.childNodes[3].textContent);
+    //  document.getElementById("nom").addEventListener("change", function () {
+
+    //   // if(a != this.value){
+    //   //  divDisplay.childNodes[3].textContent = this.value
+
+    //   // }
+
+    //   //  console.log(divDisplay.childNodes[3].textContent);
+      
+
+    //   // // console.log(textId);
+
+    //    divDisplay.childNodes[3].textContent = document.getElementById("nom").value
+
+    // })
+    // document.getElementById("bio").addEventListener("change", function () {
+    //   divDisplay.childNodes[5].textContent = document.getElementById("bio").value
+
+    // })
+    // for (option of options) {
+    //   option.onclick = function () {
+    //     console.log(this.textContent);
+    //     console.log(document.getElementById("selectText").textContent);
+    //     document.getElementById("selectText").textContent = this.textContent
+    //     console.log(document.getElementById("selectText").textContent);
+    //     divDisplay.childNodes[4].textContent = document.getElementById("selectText").textContent
+    //     list.classList.toggle("hide")
+    //     iconArrow.classList.toggle("rotate")
+
+
+    //   }
+    //  }
+
+    // buttonCreer.addEventListener("click",function(){
+
+
+    // })
     // document.getElementsByClassName("options").addEventListener("change",function(){
     //   // divDisplay.childNodes[4].textContent = document.getElementById("selectText").textContent
     //   // console.log(document.getElementById("selectText").textContent);
-      
-     
+
+
     // })
 
-   
+
 
 
 
@@ -260,6 +286,7 @@ buttonCreer.addEventListener("click", function (event) {
 
 
 
+     
 
 
 
@@ -268,10 +295,11 @@ buttonCreer.addEventListener("click", function (event) {
 
 
 
+  })
 
 })
 
-})
+
 
 let grid2 = document.getElementById("grid2")
 
