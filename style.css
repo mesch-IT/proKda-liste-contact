@@ -20,12 +20,14 @@ body {
   top: 0;
   left: 0;
   font-size: 10px;
+  z-index: 99;
 
 
 }
-.main{
- display: grid;
- grid-template-columns: 2fr 2fr;
+
+.main {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
 }
 
 .grid {
@@ -33,11 +35,12 @@ body {
   border: solid #2d7fec 1px;
   margin-top: 80px;
   width: 400px;
-  height: 700px;
+  height: 870px;
   margin-bottom: 300px;
 
 }
-.titleForm{
+
+.titleForm {
   background-color: #2d7fec;
   color: white;
   font-family: 'Roboto', sans-serif;
@@ -45,56 +48,221 @@ body {
   margin-top: -22px;
   text-align: center;
   height: 50px;
+  
 }
-form{
+
+form {
   padding-left: 5px;
 }
-p {
+
+.form-para {
   color: #2d7fec;
   font-size: 15px;
 }
-.input{
+
+.input {
   border: white;
   width: 380px;
   height: 30px;
   border-radius: 5px;
+  outline: none;
 }
-select{
-  border: #f5f5f5;
-  color: #2d7fec;
+
+#groupe {
+  border: white;
+  outline: none;
 }
-option{
+
+.select-field {
+  width: max-content;
+  background-color: white;
+}
+
+.inputText {
+  background-color: white;
+  width: 375px;
+  height: 20px;
+  border-radius: 5px;
+  color: black;
+
+}
+
+#selectText {
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+#list {
+  width: 30%;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.options {
+  width: 100%;
+  padding: 5px;
+  list-style: none;
+  cursor: pointer;
+  box-sizing: border-box;
+  position: relative;
+  font-family: 'Roboto', sans-serif;
   font-size: 15px;
+
 }
-#bio{
+
+.options:hover {
+  background-color: white;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+#iconArrow {
+  position: relative;
+  top: -40px;
+  left: 355px;
+  width: 28px;
+  height: 20px;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+#bio {
   height: 100px;
 }
-.button{
-  margin-top: 160px;
+
+label[for=image] {
+
+  padding: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  border: 1px solid whitesmoke;
+  background-color: #ddd;
+  opacity: 0.6;
+
+
+}
+
+.labelImage {
+  position: relative;
+  top: -10px;
+}
+
+#image {
+  margin-top: 50px;
+  display: none;
+}
+
+#displayImage {
+  position: relative;
+  
+  top: 20px;
+  right: -100px;
+  width: 100px;
+  height: 100px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.button {
+
+  position: relative;
+  top: 150px;
   text-align: center;
 }
-#buttonCreer{
+
+#buttonCreer {
   background-color: #2d7fec;
   color: white;
   font-size: 30px;
   width: 150px;
-  border:none;
+  border: none;
   margin-right: 30px;
   border-radius: 3px;
+  box-shadow: 1px 2px 1px black;
 }
-#buttonReini{
+
+#buttonReini {
   background-color: #eb5656;
   color: white;
   font-size: 30px;
   width: 150px;
-  border:none;
+  border: none;
   border-radius: 3px;
+  box-shadow: 1px 2px 1px black;
+
+}
+
+#grid2 {
+  width: 99%;
+}
+
+.contacts {
+
+  padding-left: 100px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  opacity: 0.6;
+  background-color: white;
+  cursor: pointer;
+  border-bottom: #2d7fec solid 1px;
+
+
+}
+
+span {
+  padding-left: 10px;
   
 }
 
-#grid2{
-  width: 99%;
+
+
+.delete {
+  width: 40px;
+  margin-left: 600px;
+  cursor: pointer;
+  margin-right: 5px;
+  position: relative;
+  top: -80px;
 }
-#contacts{
-  margin-left: 10px;
+
+h4{
+  position: relative;
+  top: -30px;
+  left: 50px;
+}
+
+.userData{
+  position: relative;
+  top: -40px;
+  left: 40px;
+  /* margin-right: 70px; */
+
+}
+.describeBio{
+  position: relative;
+  top: -20px;
+  left: 50px;
+  margin-right: 80px;
+}
+
+.showImage {
+  position: relative;
+  top: 40px;
+  left: -90px;
+  width: 100px;
+  height: 100px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  clip-path:ellipse(50% 50%);
+}
+
+hr {
+
+  visibility: hidden;
 }

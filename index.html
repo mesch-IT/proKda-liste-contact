@@ -20,20 +20,31 @@
                 <h1>Formulaire de contact</h1>
             </div>
             <form action="">
-                <p>Pénom</p>
+                <p class="form-para">Pénom</p>
                 <input type="text" id="prenom" class="input">
-                <p>Nom</p>
+                <p class="form-para">Nom</p>
                 <input type="text" id="nom" class="input">
-                <p>Groupe</p>
-                <select name="groupe" id="groupe" class="input">
-                    <option value=""></option>
-                    <option value="amis">Amis</option>
-                    <option value="Famille">Famille</option>
-                    <option value="Connaissance">Connaissance</option>
-                </select>
-                <p>Bio</p>
+                <p class="form-para">Groupe</p>
+               <div class="multi-selector">
+                   <div  id="selectField">
+                      <div class="inputText">
+                        <p id="selectText" class="inputText"></p>
+                        <img src="arrow.png" alt="arrow" id="iconArrow">
+                      </div>
+                   </div>
+                   <div class="listOptions">
+                      <ul id="list" class="hide">
+                          <li class="options">Famille</li>
+                          <li class="options">Amis</li>
+                          <li class="options">Connaissance</li>
+                      </ul>
+                   </div>
+               </div>
+                <p class="form-para">Bio</p>
                 <textarea name="bio" id="bio" cols="30" rows="10" class="input"></textarea> <br>
-                <input type="file" id="image" accept="image/png, image/jpeg" title="Choisir un fichier">
+                <label for="image" class="labelImage">Choisir un fichier</label>
+                <input type="file" id="image" accept="image/png, image/jpeg" onchange="chargerImage(event)">
+                <img src="" id="displayImage"></img>
                 <div class="button">
                     <button type="submit" id="buttonCreer">Créer</button>
                     <button type="reset" id="buttonReini">Réini.</button>
@@ -44,7 +55,9 @@
             <div class="titleForm">
                 <h1>Liste de contact</h1>
             </div>
-            <div id="contacts"></div>
+           
+           
+           
         </div>
     </div>
     </div>
